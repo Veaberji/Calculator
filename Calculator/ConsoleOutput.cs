@@ -27,7 +27,7 @@ namespace SimpleCalculator
 
         public static void EnterCalculatedString()
         {
-            Console.Write("Enter the string without brackets to calculate,\n" +
+            Console.Write("Enter the string without the parentheses to calculate,\n" +
                           "available operations:\n" +
                           " multiplication - '*',\n" +
                           " division - '/',\n" +

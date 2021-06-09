@@ -48,6 +48,15 @@ namespace SimpleCalculator
             return hasDigit;
         }
 
+        public static bool IsValidWithoutParenthesesData(string data)
+        {
+            if (data.Contains(Mathematics.OpeningParenthesis) || data.Contains(Mathematics.ClosingParenthesis))
+            {
+                return false;
+            }
+            return IsValidWithParenthesesData(data);
+        }
+
         public static bool IsCorrectString(string data)
         {
             if (string.IsNullOrWhiteSpace(data))

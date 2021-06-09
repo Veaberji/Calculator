@@ -11,9 +11,9 @@ namespace SimpleCalculatorTests
         [Test]
         public void InputData_ValidDataProvided_ReturnDataStringWithoutSpaces()
         {
-            string data = " 2 + 3 * ( 6 + 2 / 4 )";
+            string data = "2 + 3 * 6 + 2 / 4";
             var sr = new StringReader(data);
-            string expected = "2+3*(6+2/4)";
+            string expected = "2+3*6+2/4";
 
             Console.SetIn(sr);
             var dataProvider = new ConsoleData();

@@ -14,7 +14,7 @@ namespace SimpleCalculator
             while (!isValidData)
             {
                 _data = Console.ReadLine()?.Replace(" ", string.Empty);
-                isValidData = Validator.IsValidWithParenthesesData(_data);
+                isValidData = Validator.IsValidWithoutParenthesesData(_data);
 
                 if (!isValidData)
                 {

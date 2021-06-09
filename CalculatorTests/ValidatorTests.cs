@@ -125,5 +125,15 @@ namespace SimpleCalculatorTests
             Assert.IsTrue(result);
         }
 
+        [Test]
+        [TestCase("(1+(1/1))")]
+        [TestCase("(1*1")]
+        [TestCase("1*1)")]
+        public void IsValidWithoutParenthesesData_DataContainsParentheses_ReturnFalse(string data)
+        {
+            bool result = Validator.IsValidWithoutParenthesesData(data);
+
+            Assert.IsFalse(result);
+        }
     }
 }
