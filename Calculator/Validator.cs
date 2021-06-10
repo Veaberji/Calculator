@@ -50,7 +50,9 @@ namespace SimpleCalculator
 
         public static bool IsValidWithoutParenthesesData(string data)
         {
-            if (data.Contains(Mathematics.OpeningParenthesis) || data.Contains(Mathematics.ClosingParenthesis))
+            if (!IsCorrectString(data) || 
+                data.Contains(Mathematics.OpeningParenthesis) || 
+                data.Contains(Mathematics.ClosingParenthesis))
             {
                 return false;
             }
@@ -97,7 +99,7 @@ namespace SimpleCalculator
 
         public static bool CanContinue()
         {
-            var key = Console.ReadKey(true).Key;
+            var key = ConsoleOutput.ReadKey();
             if (key != ConsoleKey.Escape)
             {
                 return true;
@@ -119,7 +121,7 @@ namespace SimpleCalculator
         {
             if (data.ToLower() == "quit")
             {
-                Console.WriteLine("Adieu!");
+                ConsoleOutput.Valediction();
                 Thread.Sleep(2000);
                 Environment.Exit(0);
             }

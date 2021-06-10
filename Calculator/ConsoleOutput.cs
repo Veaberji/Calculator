@@ -27,6 +27,8 @@ namespace SimpleCalculator
 
         public static void EnterCalculatedString()
         {
+            Console.Clear();
+
             Console.Write("Enter the string without the parentheses to calculate,\n" +
                           "available operations:\n" +
                           " multiplication - '*',\n" +
@@ -39,6 +41,8 @@ namespace SimpleCalculator
 
         public static void EnterInputFilePath()
         {
+            Console.Clear();
+
             Console.Write("Enter the path to the calculations file. " +
                           "Or enter 'quit' to exit\n>>> ");
         }
@@ -54,6 +58,21 @@ namespace SimpleCalculator
             Console.WriteLine("You are trying to overwrite an existing file.\n" +
                               "Would you like to continue the overwriting?\n" +
                               "Press any key to continue or press 'Esc' to exit.\n");
+        }
+
+        public static void Valediction()
+        {
+            Console.WriteLine("Adieu!");
+        }
+
+        public static string Input()
+        {
+            return Console.ReadLine()?.Replace(" ", string.Empty);
+        }
+
+        public static ConsoleKey ReadKey()
+        {
+            return Console.ReadKey(true).Key;
         }
     }
 }

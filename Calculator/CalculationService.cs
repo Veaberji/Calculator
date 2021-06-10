@@ -19,7 +19,6 @@ namespace SimpleCalculator
 
             while (_continue)
             {
-                Console.Clear();
                 try
                 {
                     string data = dataProvider.InputData();
@@ -42,7 +41,6 @@ namespace SimpleCalculator
 
             while (_continue)
             {
-                Console.Clear();
                 var data = dataProvider.InputData();
                 var outputData = new string[data.Length];
 

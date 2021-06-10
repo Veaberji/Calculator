@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SimpleCalculator
+﻿namespace SimpleCalculator
 {
     public class ConsoleData
     {
@@ -13,7 +11,7 @@ namespace SimpleCalculator
             bool isValidData = false;
             while (!isValidData)
             {
-                _data = Console.ReadLine()?.Replace(" ", string.Empty);
+                _data = ConsoleOutput.Input();
                 isValidData = Validator.IsValidWithoutParenthesesData(_data);
 
                 if (!isValidData)

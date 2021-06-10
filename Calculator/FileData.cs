@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
 namespace SimpleCalculator
 {
@@ -45,7 +44,7 @@ namespace SimpleCalculator
 
             while (!isFileExists)
             {
-                filePath = Console.ReadLine();
+                filePath = ConsoleOutput.Input();
                 Validator.IsCorrectString(filePath);
                 isFileExists = File.Exists(filePath);
                 if (!isFileExists)
@@ -64,7 +63,7 @@ namespace SimpleCalculator
 
             while (!isPossibleDirectory)
             {
-                filePath = Console.ReadLine()?.Trim();
+                filePath = ConsoleOutput.Input();
                 Validator.IsCorrectString(filePath);
                 isPossibleDirectory = Validator.IsPossibleDirectory(filePath);
                 if (!isPossibleDirectory)
